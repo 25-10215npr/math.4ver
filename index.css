@@ -11,6 +11,14 @@ body {
 
 }
 
+.app {
+  max-width: 1200px;   /* ⭐ 핵심 */
+  margin: 0 auto;      /* 가운데 정렬 */
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+}
+
 h2 {
   text-align: center;
   margin-bottom: 12px;
@@ -26,6 +34,11 @@ p {
 /* =========================
    통합 컨트롤 패널
 ========================= */
+.panel {
+  width: clamp(260px, 28vw, 340px);
+  flex-shrink: 0;
+}
+
 .unified-panel {
   width: 340px;
   margin: 0 auto 16px;
@@ -298,6 +311,13 @@ button {
   font-style: italic;
 }
 
+.graph-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* 모든 숫자 인풋 통일 */
 input[type="number"] {
   width: 70px;
@@ -311,7 +331,9 @@ input[type="number"] {
    캔버스
 ========================= */
 canvas {
-
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 1 / 1;
   background: linear-gradient(180deg, #ffffff 0%,#fdfefe 50%,  #f8fafc 100% );
   border-radius : 15px ;
   border: 1px solid #e5e7eb;
